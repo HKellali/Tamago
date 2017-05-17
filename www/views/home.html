@@ -1,0 +1,35 @@
+<section class="panel pannel-padding" ng-controller="HomeController">
+    <button ng-hide="panel === 0" ng-click="changePanel(0)">Retour</button>
+    <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
+        <div class="personnage_stats">
+            <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+                <div>Sante</div>
+                <div>ADN</div>
+            </div>
+            <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+                <div>Faim</div>
+                <div>Humeur</div>
+            </div>
+        </div>
+        <div class="personnage_img" style="text-align:center;height:auto;">
+            <img src="../img/img.jpg">
+            <div>niveau - barre exp</div>
+        </div>
+        <div class="personnage_btns">
+            <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+                <button ng-click="changePanel(-1)">Nourrir</button>
+                <button ng-click="">Boutique</button>
+                <button ng-click="changePanel(1)">Activités</button>
+            </div>
+            <div style="text-align:center;padding-top: 5%;">
+                <button>Compte</button>
+            </div>
+        </div>
+    </section>
+    <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
+        Food
+    </section>
+    <section class="panel" ng-class="{center :panel === 1, right : panel < 1, left : panel > 1}">
+        Activities
+    </section>
+</section>

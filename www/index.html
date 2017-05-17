@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="Tamago">
+<head>
+    <!--<meta http-equiv="Content-Security-Policy"-->
+    <!--content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script type="text/javascript" src="js/cssRefresh.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+<header class="header">
+    Tamago
+</header>
+<section class="view" ng-view="view">
+</section>
+<nav class="nav" ng-controller="NavigationController">
+    <a href="#main" ng-click="changeMenu('main')" ng-class="{active: menu==='main'}"><i class="fa fa-user-circle-o"
+                                                                                        aria-hidden="true"></i></a>
+    <a href="#home" ng-click="changeMenu('home')" ng-class="{active: menu==='home', disabled: menu==='main'}"><i
+            class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="#about" ng-click="changeMenu('about')" ng-class="{active: menu==='about'}"><i class="fa fa-globe"
+                                                                                           aria-hidden="true"></i></a>
+</nav>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controller/NavigationController.js"></script>
+<script src="js/controller/HomeController.js"></script>
+
+<!-- Services -->
+
+<!-- Directives -->
+
+</body>
+</html>
