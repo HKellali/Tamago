@@ -25,9 +25,9 @@ bower_components
 
 # webstorm files
 .idea
-.idea/
 .npmignore
 hooks/
 package.json
 res/
 www/css/
+www/.sass-cache/
