@@ -1,6 +1,5 @@
 document.addEventListener('deviceready', function () {
-    window.plugins.playGamesServices.auth();
-    console.log('log');
+    // window.plugins.playGamesServices.auth();
 }, false);
 
 var app = angular.module('Tamago', ['ngRoute']);
@@ -28,6 +27,6 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
             templateUrl: 'views/creation.html'
         })
         .otherwise({
-            redirectTo: '/home'
+            redirectTo: '/main'
         });
 }]);

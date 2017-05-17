@@ -1,1 +1,33 @@
-# Created by .ignore support plugin (hsz.mobi)
+# Build specific or user specific files we don't want in source control
+bin/
+bld/
+*.jsproj.user
+
+# Used by the VS project system to mirror the file system changes
+changelist.json
+
+# Cordova-generated folders we don't want in source control (they are recreated at build)
+platforms/
+plugins/
+
+# Frameworks we can't redistribute. Files are downloaded on project build.
+www/scripts/frameworks/
+
+# master only
+build
+
+# common
+node_modules
+bower_components
+.DS_Store
+*~
+/*.log
+
+# webstorm files
+.idea
+.idea/
+.npmignore
+hooks/
+package.json
+res/
+www/css/

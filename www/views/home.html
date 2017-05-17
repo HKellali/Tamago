@@ -12,22 +12,67 @@
             </div>
         </div>
         <div class="personnage_img" style="text-align:center;height:auto;">
-            <img src="../img/img.jpg">
+            <!--<img src="../img/img.jpg">-->
             <div>niveau - barre exp</div>
         </div>
         <div class="personnage_btns">
             <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
                 <button ng-click="changePanel(-1)">Nourrir</button>
-                <button ng-click="">Boutique</button>
                 <button ng-click="changePanel(1)">Activités</button>
-            </div>
-            <div style="text-align:center;padding-top: 5%;">
-                <button>Compte</button>
             </div>
         </div>
     </section>
     <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
-        Food
+        <div class="nourrir-titre">
+            <h3>Nourrir</h3>
+        </div>
+        <div class="nourrir-stats">
+            <div>Faim/100</div>
+        </div>
+        <div class="nourrir-ligne">
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">5</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>
+                <span class="nourrir-ligne-attr">+10</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">7</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>
+                <span class="nourrir-ligne-attr">+10</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>
+                <span class="nourrir-ligne-attr">+10</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>
+                <span class="nourrir-ligne-attr">+10</span>
+            </div>
+        </div>
+        <div class="nourrir-ligne">
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/donut.png)"></div>
+                <span class="nourrir-ligne-attr">+20</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/donut.png)"></div>
+                <span class="nourrir-ligne-attr">+20</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/donut.png)"></div>
+                <span class="nourrir-ligne-attr">+20</span>
+            </div>
+            <div style="display:block;width:20%;">
+                <span class="nourrir-ligne-item">8</span>
+                <div class="nourrir-ligne-img" style="background-image:url(../img/donut.png)"></div>
+                <span class="nourrir-ligne-attr">+20</span>
+            </div>
+        </div>
     </section>
     <section class="panel" ng-class="{center :panel === 1, right : panel < 1, left : panel > 1}">
         Activities
