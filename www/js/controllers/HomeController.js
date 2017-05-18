@@ -31,5 +31,7 @@ function HomeController($scope, items) {
         $scope.getItems();
     }
 
+    console.log($scope.items);
+
     // $scope.getItems();
 }
