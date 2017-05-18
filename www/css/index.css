@@ -125,7 +125,7 @@ h1 {
     background: -o-linear-gradient(top,#ff4d4d 0%,#ff0000 100%);
     background: -ms-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
     background: linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
-    color:#800000;
+    color:#fff;
 
     text-shadow: 1px 1px 1px rgba(255,255,255, .22);
 
@@ -135,13 +135,14 @@ h1 {
 
     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);  }
+    box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    outline:none;}
 
-.connection-btn button, .compte-btn button{
+.connection-btn button, .compte-btn button, .character-btns button{
     width: 150px;
     height: 30px;
     background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
-    color: #800000;
+    color: #fff;
     font: bold 12px/25px helveticaNeue-light;
 
     -webkit-border-radius: 10px;
@@ -152,6 +153,7 @@ h1 {
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
     box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
 
+    outline:none;
 }
 
 .connection-nom input, .connection-pass input{
