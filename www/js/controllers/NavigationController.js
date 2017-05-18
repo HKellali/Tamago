@@ -6,10 +6,9 @@ app.controller('NavigationController', ['$scope', '$location', NavigationControl
 
 
 function NavigationController($scope, $location) {
-    $scope.menu = 'main';
+    $scope.menu = ($location.$$path).slice(1, ($location.$$path).length);
     $scope.changeMenu = function (menu) {
 
         $scope.menu = menu;
-        console.log($location);
     }
 }

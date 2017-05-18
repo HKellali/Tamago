@@ -9,6 +9,26 @@ body {
   color: #FFF;
 }
 
+.loader {
+  position: absolute;
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 i {
   display: inline-block;
 }
@@ -59,12 +79,13 @@ h1 {
   -o-transition-duration: 1s;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
+  border-right: 1px solid #1f253d;
 }
 .nav a :visited {
   color: #FFF;
 }
-.nav a:first-child {
-  border-right: 1px solid #1f253d;
+.nav a:last-child {
+  border-right: 0px solid #1f253d;
 }
 .nav .active {
   border-top: 3px solid #6394ff;
@@ -80,6 +101,7 @@ h1 {
   bottom: 0;
   left: 0;
   overflow-x: hidden;
+  color: #000;
 }
 
 .panel {
@@ -158,7 +180,6 @@ h1 {
 
 .connection-btn {
   text-align: center;
-  height: 30%;
 }
 
 .create-title {

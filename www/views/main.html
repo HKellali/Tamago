@@ -2,78 +2,80 @@
     <button ng-hide="panel === 0" ng-click="changePanel(0)">Back</button>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
         <div ng-show="connected === 0" id="main">
-            <button ng-click="changePanel(1)">Log in</button>
+            <button ng-click="changePanel(1)">Sign in</button>
             <br/>
-            <button ng-click="changePanel(-1)">Sign in</button>
+            <button ng-click="changePanel(-1)">Sign up</button>
         </div>
         <div ng-show="connected === 1" id="account">
             <div class="compte-titre">
-                <h3>My Account</h3>
+                <h3>My account</h3>
             </div>
             <div class="compte-nom">
                 <h4>Name:</h4>
-                <div>name</div>
+                <div>{{ tamagos[0].name }}</div>
             </div>
             <div class="compte-points">
-                <h4>Points Tamago:</h4>
-                <div>tp</div>
+                <h4>Tamago points:</h4>
+                <div>10</div>
             </div>
             <div class="compte-quetes">
-                <h4>Quetes:</h4>
-                <div>quest</div>
+                <h4>Quests:</h4>
+                <div>3</div>
             </div>
             <div class="compte-age">
                 <h4>Age:</h4>
-                <div>age</div>
+                <div>{{ tamagos[0].age }}</div>
             </div>
             <div class="compte-btn">
-                <button type="button">Personnage</button>
-                <button type="button">Classement</button>
+                <button>Tamago</button>
+                <button>Ranking</button>
             </div>
 
-            <div class="create-title">
-                <h3>Cr&eacute;ez votre Tamago</h3>
-            </div>
-            <div class="create-nom">
-                <label>Nom :</label>
-                <input type="text">
-            </div>
-            <div class="create-btn">
-                <button type="button">Cr&eacute;er</button>
+            <div class="create-tamago" ng-show="tamagos.length == 0">
+                <div class="create-title">
+                    <h3>Create your Tamago</h3>
+                </div>
+                <div class="create-nom">
+                    <label>Name :</label>
+                    <input ng-model="name" type="text">
+                </div>
+                <div class="create-btn">
+                    <button ng-click="createTamago()">Create</button>
+                </div>
             </div>
         </div>
     </section>
     <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
         <div class="connection-title">
-            <h3>Inscrivez vous</h3>
+            <h3>Sign up</h3>
         </div>
         <div class="connection-nom">
-            <label>Nom :</label>
+            <label>Name :</label>
             <input type="text">
         </div>
         <div class="connection-pass">
-            <label>Mot de passe :</label>
+            <label>Password :</label>
             <input type="text">
         </div>
         <div class="connection-btn">
-            <button type="button">S'inscrire</button>
+            <button type="button">Sign up</button>
         </div>
     </section>
     <section class="panel" ng-class="{center :panel === 1, right : panel < 1, left : panel > 1}">
         <section class="panel">
             <div class="connection-title">
-                <h3>Connectez vous</h3>
+                <h3>Sign in</h3>
             </div>
             <div class="connection-nom">
-                <label>Nom :</label>
+                <label>Name :</label>
                 <input type="text">
             </div>
             <div class="connection-pass">
-                <label>Mot de passe :</label>
+                <label>Password :</label>
                 <input type="text">
             </div>
             <div class="connection-btn">
-                <button ng-click="changePanel(0); connect()">Se connecter</button>
+                <button ng-click="changePanel(0); connect()">Sign in</button>
             </div>
         </section>
     </section>
