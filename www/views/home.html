@@ -1,29 +1,32 @@
 <section class="panel pannel-padding" ng-controller="HomeController">
     <button ng-hide="panel === 0" ng-click="changePanel(0)">Back</button>
+    <div class="loader" ng-show="loader === true">
+        <div class="loader-circle"></div>
+    </div>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
-        <div class="character-stats">
+        <div class="character-stats" style="text-align:center;">
+            {{ tamagos[0].name }}
             <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
-                <div>Sante</div>
-                <div>ADN</div>
+                <div>Health {{ tamagos[0].health }}</div>
+                <div>ADN 0</div>
             </div>
             <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
-                <div>Faim</div>
-                <div>Humeur</div>
+                <div>Hunger {{ tamagos[0].hunger }}</div>
+                <div>Mood {{ tamagos[0].mood }}</div>
             </div>
         </div>
         <div class="character-img" style="text-align:center;height:auto;">
             <!--<img src="../img/img.jpg">-->
-            <div>niveau - barre exp</div>
+            <div>Level {{ tamagos[0].level }}</div>
         </div>
         <div class="character-btns">
             <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
-                <button ng-click="changePanel(-1); getItems()">Nourrir</button>
-                <button ng-click="changePanel(1)">Activités</button>
+                <button ng-click="changePanel(-1); getItems()">Feed</button>
+                <button ng-click="changePanel(1)">Activities</button>
             </div>
         </div>
     </section>
     <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
-        <div class="loader" ng-show="loader === true"></div>
         <div class="food-title">
             <h3>Nourrir</h3>
         </div>
