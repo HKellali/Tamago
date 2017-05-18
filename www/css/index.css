@@ -137,7 +137,7 @@ h1 {
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
     box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);  }
 
-.connection-btn button{
+.connection-btn button, .compte-btn button{
     width: 150px;
     height: 30px;
     background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
@@ -159,3 +159,15 @@ h1 {
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
+.compte-titre{
+    font-family: HelveticaNeue-Light;
+    font-size:1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, red, orange, green, blue, violet);
+}
+
+.compte-nom, .compte-points, .compte-quetes, .compte-age{
+    color:#6e0058;}
+
