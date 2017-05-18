@@ -17,27 +17,15 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-hdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-ldpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-mdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-xhdpi"/>
+        <splash src="www/img/logo.png" density="land-hdpi"/>
+        <splash src="www/img/logo.png" density="land-ldpi"/>
+        <splash src="www/img/logo.png" density="land-mdpi"/>
+        <splash src="www/img/logo.png" density="land-xhdpi"/>
 
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-hdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-ldpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-mdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-xhdpi"/>
-    </platform>
-    <platform name="browser">
-        <allow-intent href="market:*" />
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-hdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-ldpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-mdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="land-xhdpi"/>
-
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-hdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-ldpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-mdpi"/>
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-xhdpi"/>
+        <splash src="www/img/logo.png" density="port-hdpi"/>
+        <splash src="www/img/logo.png" density="port-ldpi"/>
+        <splash src="www/img/logo.png" density="port-mdpi"/>
+        <splash src="www/img/logo.png" density="port-xhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
