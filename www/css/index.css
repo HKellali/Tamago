@@ -96,18 +96,21 @@ h1 {
 .block-main{
     position: absolute;
     left:30%;
-    top:20%;
-}
+    top:20%;  }
 
 .block-main h1{
-    text-align: center;
+    text-align: center;  }
 
-}
+#logo{
+    width:85%;
+    height:90px;
+    margin-left:10%;  }
 
-#main button{
+#main button {
+    left:25%;
     width:150px;
     height:50px;
-    margin-top: 20%;
+    margin-top: 5%;
     display: inline-block;
     position: relative;
     padding: 0 20px;
@@ -116,13 +119,13 @@ h1 {
     font: bold 12px/25px helveticaNeue-light;
     
     background: rgb(204,0,51,0.2);
-    background: -moz-linear-gradient(top, #ff9ab3 0%, #cc0033 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9ab3), color-stop(100%,#cc0033));
-    background: -webkit-linear-gradient(top, #ff9ab3 0%,#cc0033 100%);
-    background: -o-linear-gradient(top,#ff9ab3 0%,#cc0033 100%);
-    background: -ms-linear-gradient(top, #ff9ab3 0%, #cc0033 100%);
-    background: linear-gradient(top, #ff9ab3 0%, #cc0033 100%);
-    color:#67001a;
+    background: -moz-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff4d4d), color-stop(100%,#ff0000));
+    background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
+    background: -o-linear-gradient(top,#ff4d4d 0%,#ff0000 100%);
+    background: -ms-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+    background: linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+    color:#800000;
 
     text-shadow: 1px 1px 1px rgba(255,255,255, .22);
 
@@ -132,7 +135,39 @@ h1 {
 
     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);  }
+
+.connection-btn button, .compte-btn button{
+    width: 150px;
+    height: 30px;
+    background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
+    color: #800000;
+    font: bold 12px/25px helveticaNeue-light;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
     box-shadow:  1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
 
-
 }
+
+.connection-nom input, .connection-pass input{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.compte-titre{
+    font-family: HelveticaNeue-Light;
+    font-size:1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, red, orange, green, blue, violet);
+}
+
+.compte-nom, .compte-points, .compte-quetes, .compte-age{
+    color:#6e0058;}
+
