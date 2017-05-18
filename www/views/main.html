@@ -2,6 +2,7 @@
     <button ng-hide="panel === 0" ng-click="changePanel(0)">Back</button>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
         <div ng-show="connected === 0" id="main">
+            <img id="logo" src="./img/tamago.png" alt="logo"/>
             <button ng-click="changePanel(1)">Sign in</button>
             <br/>
             <button ng-click="changePanel(-1)">Sign up</button>
@@ -70,6 +71,7 @@
                 <label>Name :</label>
                 <input type="text">
             </div>
+            <br/>
             <div class="connection-pass">
                 <label>Password :</label>
                 <input type="text">
