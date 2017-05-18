@@ -17,15 +17,6 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
         .when('/main', {
             templateUrl: 'views/main.html'
         })
-        .when('/connection', {
-            templateUrl: 'views/connection.html'
-        })
-        .when('/character', {
-            templateUrl: 'views/character.html'
-        })
-        .when('/creation', {
-            templateUrl: 'views/creation.html'
-        })
         .otherwise({
             redirectTo: '/main'
         });

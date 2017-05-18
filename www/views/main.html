@@ -1,10 +1,46 @@
 <section class="panel pannel-padding" ng-controller="MainController">
-    <button ng-hide="panel === 0" ng-click="changePanel(0)">Retour</button>
+    <button ng-hide="panel === 0" ng-click="changePanel(0)">Back</button>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
-        <div id="main">
-            <button ng-click="changePanel(-1)">Se Connecter</button>
+        <div ng-show="connected === 0" id="main">
+            <button ng-click="changePanel(1)">Log in</button>
             <br/>
-            <button ng-click="changePanel(1)">S'incrire</button>
+            <button ng-click="changePanel(-1)">Sign in</button>
+        </div>
+        <div ng-show="connected === 1" id="account">
+            <div class="compte-titre">
+                <h3>My Account</h3>
+            </div>
+            <div class="compte-nom">
+                <h4>Name:</h4>
+                <div>name</div>
+            </div>
+            <div class="compte-points">
+                <h4>Points Tamago:</h4>
+                <div>tp</div>
+            </div>
+            <div class="compte-quetes">
+                <h4>Quetes:</h4>
+                <div>quest</div>
+            </div>
+            <div class="compte-age">
+                <h4>Age:</h4>
+                <div>age</div>
+            </div>
+            <div class="compte-btn">
+                <button type="button">Personnage</button>
+                <button type="button">Classement</button>
+            </div>
+
+            <div class="create-title">
+                <h3>Cr&eacute;ez votre Tamago</h3>
+            </div>
+            <div class="create-nom">
+                <label>Nom :</label>
+                <input type="text">
+            </div>
+            <div class="create-btn">
+                <button type="button">Cr&eacute;er</button>
+            </div>
         </div>
     </section>
     <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
@@ -37,7 +73,7 @@
                 <input type="text">
             </div>
             <div class="connection-btn">
-                <button type="button">Se connecter</button>
+                <button ng-click="changePanel(0); connect()">Se connecter</button>
             </div>
         </section>
     </section>

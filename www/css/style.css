@@ -1,9 +1,7 @@
-@import "compass";
-
-$backgroundColor: #000f30;
-
 *, *:before, *:after {
-  @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,7 +32,7 @@ h1 {
   color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
-  background-color: lighten($backgroundColor, 50%);
+  background-color: #3071ff;
 }
 
 .nav {
@@ -45,32 +43,34 @@ h1 {
   height: 60px;
   line-height: 60px;
   text-align: center;
-  background-color: lighten($backgroundColor, 25%);
-  @include clearfix;
-  a {
-    font-size: 30px;
-    color: #FFF;
-    display: block;
-    width: 33%;
-    height: 60px;
-    line-height: 60px;
-    float: left;
-    @include transition-duration;
-    border-right: 1px solid #1f253d;
-    :visited {
-      color: #FFF;
-    }
-  }
-  a:last-child {
-    border-right: 0px solid #1f253d;
-  }
-  .active {
-    border-top: 3px solid lighten($backgroundColor, 60%);
-  }
-  i {
-    margin-top: 15px;
-  }
-
+  background-color: #0037b0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.nav a {
+  font-size: 30px;
+  color: #FFF;
+  display: block;
+  width: 33%;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.nav a :visited {
+  color: #FFF;
+}
+.nav a:first-child {
+  border-right: 1px solid #1f253d;
+}
+.nav .active {
+  border-top: 3px solid #6394ff;
+}
+.nav i {
+  margin-top: 15px;
 }
 
 .view {
@@ -80,7 +80,6 @@ h1 {
   bottom: 0;
   left: 0;
   overflow-x: hidden;
-  color: #000;
 }
 
 .panel {
@@ -90,9 +89,11 @@ h1 {
   right: 0;
   bottom: 60px;
   overflow-x: hidden;
-  //overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  @include transition-duration(.5s);
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .panel-padding {
@@ -100,15 +101,24 @@ h1 {
 }
 
 .left {
-  @include transform(translate3D(-100%, 0, 0));
+  -moz-transform: translate3D(-100%, 0, 0);
+  -ms-transform: translate3D(-100%, 0, 0);
+  -webkit-transform: translate3D(-100%, 0, 0);
+  transform: translate3D(-100%, 0, 0);
 }
 
 .center {
-  @include transform(translate3D(0, 0, 0));
+  -moz-transform: translate3D(0, 0, 0);
+  -ms-transform: translate3D(0, 0, 0);
+  -webkit-transform: translate3D(0, 0, 0);
+  transform: translate3D(0, 0, 0);
 }
 
 .right {
-  @include transform(translate3D(100%, 0, 0));
+  -moz-transform: translate3D(100%, 0, 0);
+  -ms-transform: translate3D(100%, 0, 0);
+  -webkit-transform: translate3D(100%, 0, 0);
+  transform: translate3D(100%, 0, 0);
 }
 
 .connection-title {
@@ -119,40 +129,36 @@ h1 {
 .connection-nom {
   display: flex;
   height: 10%;
-
-  label {
-    width: 50%;
-    margin-left: 10px;
-  }
-
-  input {
-    height: 20px;
-    width: 50%;
-    float: right;
-    margin-right: 10px;
-  }
+}
+.connection-nom label {
+  width: 50%;
+  margin-left: 10px;
+}
+.connection-nom input {
+  height: 20px;
+  width: 50%;
+  float: right;
+  margin-right: 10px;
 }
 
 .connection-pass {
   display: flex;
   height: 20%;
-
-  label {
-    width: 50%;
-    margin-left: 10px;
-  }
-
-  input {
-    height: 20px;
-    width: 50%;
-    float: right;
-    margin-right: 10px;
-  }
+}
+.connection-pass label {
+  width: 50%;
+  margin-left: 10px;
+}
+.connection-pass input {
+  height: 20px;
+  width: 50%;
+  float: right;
+  margin-right: 10px;
 }
 
 .connection-btn {
   text-align: center;
-  //height:20px;
+  height: 30%;
 }
 
 .create-title {
@@ -163,18 +169,16 @@ h1 {
 .create-nom {
   display: flex;
   height: 30%;
-
-  label {
-    width: 50%;
-    margin-left: 10px;
-  }
-
-  input {
-    height: 20px;
-    width: 50%;
-    float: right;
-    margin-right: 10px;
-  }
+}
+.create-nom label {
+  width: 50%;
+  margin-left: 10px;
+}
+.create-nom input {
+  height: 20px;
+  width: 50%;
+  float: right;
+  margin-right: 10px;
 }
 
 .create-btn {
@@ -225,36 +229,36 @@ h1 {
   display: flex;
   justify-content: space-around;
   height: 15%;
-  h4 {
-    margin: 0px;
-  }
+}
+.compte-nom h4 {
+  margin: 0px;
 }
 
 .compte-points {
   display: flex;
   justify-content: space-around;
   height: 15%;
-  h4 {
-    margin: 0px;
-  }
+}
+.compte-points h4 {
+  margin: 0px;
 }
 
 .compte-quetes {
   display: flex;
   justify-content: space-around;
   height: 15%;
-  h4 {
-    margin: 0px;
-  }
+}
+.compte-quetes h4 {
+  margin: 0px;
 }
 
 .compte-age {
   display: flex;
   justify-content: space-around;
   height: 15%;
-  h4 {
-    margin: 0px;
-  }
+}
+.compte-age h4 {
+  margin: 0px;
 }
 
 .compte-btn {
@@ -264,7 +268,7 @@ h1 {
 
 .nourrir-stats {
   text-align: center;
-  height: 10%
+  height: 10%;
 }
 
 .nourrir-titre {
@@ -276,24 +280,26 @@ h1 {
   justify-content: space-around;
   height: 10%;
   margin-bottom: 15%;
-  .nourrir-ligne-img {
-    width: 100%; /*or 70%, or what you want*/
-    height: 100%; /*or 70%, or what you want*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .nourrir-ligne-item {
-    width: 100%;
-    height: 10px;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
-  }
-  .nourrir-ligne-attr {
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    display: block;
-  }
+}
+.nourrir-ligne .nourrir-ligne-img {
+  width: 100%;
+  /*or 70%, or what you want*/
+  height: 100%;
+  /*or 70%, or what you want*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nourrir-ligne .nourrir-ligne-item {
+  width: 100%;
+  height: 10px;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+.nourrir-ligne .nourrir-ligne-attr {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  display: block;
 }
