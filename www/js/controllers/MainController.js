@@ -6,37 +6,51 @@ app.controller('MainController', ['$scope', 'tamagos', MainController]);
 
 
 function MainController($scope, tamagos) {
-    $scope.panel = 0;
-    $scope.connected = 1;
-    $scope.name = '';
-    $scope.tamago = {};
 
-    function getTamagos () {
+    //functions
+    $scope.createTamago = createTamago;
+    $scope.getTamagos = getTamagos;
+    $scope.changePanel = changePanel;
+    $scope.connect = connect;
+    $scope.disconnect = disconnect;
+    $scope.init = init;
+
+    //init
+    $scope.init();
+
+    function init() {
+        //variables
+        $scope.panel = 0;
+        $scope.connected = 1;
+        $scope.name = '';
+
+        //functions
+        $scope.getTamagos();
+    }
+
+    function getTamagos() {
         tamagos.get().then(function (response) {
             $scope.tamagos = response.data;
         });
     }
 
     function createTamago() {
-        $scope.tamago.name = $scope.name;
+        $scope.tamago = {
+            name: $scope.name
+        };
         tamagos.save($scope.tamago);
         $scope.getTamagos();
     }
 
-    $scope.createTamago = createTamago;
-    $scope.getTamagos = getTamagos;
-
-    $scope.changePanel = function (panel) {
+    function changePanel(panel) {
         $scope.panel = panel;
-    };
+    }
 
-    $scope.connect = function () {
+    function connect() {
         $scope.connected = 1;
-    };
+    }
 
-    $scope.disconnect = function () {
+    function disconnect() {
         $scope.connected = 0;
-    };
-
-    $scope.getTamagos();
+    }
 }

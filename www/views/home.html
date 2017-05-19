@@ -4,13 +4,17 @@
         <div class="loader-circle"></div>
     </div>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
-        <div class="character-stats" style="text-align:center;">
-            {{ tamagos[0].name }}
-            <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+        <img class="character-icon" src="img/tamago.png" alt="" align="middle">
+        <div class="character-stats"
+             style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+            <div>
+                {{ tamagos[0].name }}
+            </div>
+            <div>
                 <div>Health {{ tamagos[0].health }}</div>
                 <div>ADN 0</div>
             </div>
-            <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
+            <div>
                 <div>Hunger {{ tamagos[0].hunger }}</div>
                 <div>Mood {{ tamagos[0].mood }}</div>
             </div>
@@ -31,14 +35,15 @@
             <h3>Nourrir</h3>
         </div>
         <div class="food-stats">
-            <div>Faim/100</div>
+            <div>Faim {{ tamagos[0].hunger }}/100</div>
         </div>
         <div class="nourrir-ligne" ng-repeat="item in items" ng-if="item.type === 'food'">
             <div style="display:block;width:20%;">
-                <span class="nourrir-ligne-nom">{{ item.name }}</span>
+                <img class="food-icon" ng-click="feed(item)" ng-src="img/{{ item.name }}.png" alt="">
+                <!--<span class="nourrir-ligne-nom">{{ item.name }}</span>-->
                 <!--<span class="nourrir-ligne-item">7</span>-->
                 <!--<div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>-->
-                <span class="nourrir-ligne-attr">faim -{{ item.hunger }}</span>
+                <span class="nourrir-ligne-attr">+{{ item.hunger }}</span>
             </div>
         </div>
     </section>

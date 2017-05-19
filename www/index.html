@@ -22,9 +22,12 @@
 <section class="view" ng-view="view">
 </section>
 <nav class="nav" ng-controller="NavigationController">
-    <a href="#main" ng-click="changeMenu('main')" ng-class="{active: menu==='main'}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-    <a href="#home" ng-click="changeMenu('home')" ng-class="{active: menu==='home'}"><i class="fa fa-home" aria-hidden="true"></i></a>
-    <a href="#about" ng-click="changeMenu('about')" ng-class="{active: menu==='about'}"><i class="fa fa-globe" aria-hidden="true"></i></a>
+    <a href="#main" ng-click="changeMenu('main')" ng-class="{active: menu==='main'}"><i class="fa fa-user-circle-o"
+                                                                                        aria-hidden="true"></i></a>
+    <a href="#home" ng-click="changeMenu('home')" ng-class="{active: menu==='home'}"><i class="fa fa-home"
+                                                                                        aria-hidden="true"></i></a>
+    <a href="#about" ng-click="changeMenu('about')" ng-class="{active: menu==='about'}"><i class="fa fa-globe"
+                                                                                           aria-hidden="true"></i></a>
 </nav>
 
 <!-- Modules -->
@@ -38,6 +41,7 @@
 <!-- Services -->
 <script src="js/services/tamagos.js"></script>
 <script src="js/services/items.js"></script>
+<script src="js/services/activities.js"></script>
 
 <!-- Directives -->
 
