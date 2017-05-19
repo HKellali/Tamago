@@ -1,10 +1,12 @@
 app.factory('tamagos', ['$http', function ($http) {
-    var url = 'https://tamago.niamor.com/api/tamago';
+    var baseUrl = 'https://tamago.niamor.com/api/tamago';
+    var id = 1;
+    var url = baseUrl + '/';
+    var promise;
     return {
         get: function () {
-            var promise;
             if (!promise) {
-                promise = $http.get(url)
+                promise = $http.get(url + id)
                     .then(function (response) {
                         return response;
                     });
@@ -12,13 +14,22 @@ app.factory('tamagos', ['$http', function ($http) {
             return promise;
         },
         save: function (data) {
-            $http.post(url, {
+            promise = $http.post(url, {
                     name: data.name
                 }
             ).then(function (response) {
                 console.log(response);
                 return response;
             });
+            return promise;
+        },
+        update: function (data) {
+            promise = $http.put(url + data.id, data
+            ).then(function (response) {
+                console.log(response);
+                return response;
+            });
+            return promise;
         }
     };
 }]);

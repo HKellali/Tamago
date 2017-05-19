@@ -13,26 +13,33 @@ function HomeController($scope, items, tamagos) {
     $scope.createItem = createItem;
     $scope.getItems = getItems;
     $scope.changePanel = changePanel;
-    $scope.getTamagos = getTamagos;
+    $scope.getTamago = getTamago;
+    $scope.updateState = updateState;
     $scope.feed = feed;
 
     function changePanel(panel) {
         $scope.panel = panel;
     }
 
-    function feed(item){
-        $scope.tamagos[0].hunger +=  item.hunger;
-        if($scope.tamagos[0].hunger >= 100){
-            $scope.tamagos[0].hunger = 100;
-        }
-
+    function updateState(){
+        $scope.state = $scope.tamago.hunger >= 50?'Happy' : 'Normal';
     }
 
-    function getTamagos () {
+    function feed(item){
+        $scope.tamago.hunger +=  item.hunger;
+        updateState();
+        if($scope.tamago.hunger >= 100){
+            $scope.tamago.hunger = 100;
+        }
+        tamagos.update($scope.tamago);
+    }
+
+    function getTamago () {
         $scope.loader = true;
         tamagos.get().then(function (response) {
-            $scope.tamagos = response.data;
+            $scope.tamago = response.data;
             $scope.loader = false;
+            $scope.updateState();
         });
     }
 
@@ -49,6 +56,5 @@ function HomeController($scope, items, tamagos) {
         items.save($scope.item);
         $scope.getItems();
     }
-
-    $scope.getTamagos();
+    $scope.getTamago();
 }

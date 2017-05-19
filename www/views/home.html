@@ -4,24 +4,24 @@
         <div class="loader-circle"></div>
     </div>
     <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
-        <img class="character-icon" src="img/tamago.png" alt="" align="middle">
+        <img class="character-icon" src="img/tamago{{ state }}.png" alt="" align="middle">
         <div class="character-stats"
              style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
             <div>
-                {{ tamagos[0].name }}
+                {{ tamago.name }}
             </div>
             <div>
-                <div>Health {{ tamagos[0].health }}</div>
+                <div>Health {{ tamago.health }}</div>
                 <div>ADN 0</div>
             </div>
             <div>
-                <div>Hunger {{ tamagos[0].hunger }}</div>
-                <div>Mood {{ tamagos[0].mood }}</div>
+                <div>Hunger {{ tamago.hunger }}</div>
+                <div>Mood {{ tamago.mood }}</div>
             </div>
         </div>
         <div class="character-img" style="text-align:center;height:auto;">
             <!--<img src="../img/img.jpg">-->
-            <div>Level {{ tamagos[0].level }}</div>
+            <div>Level {{ tamago.level }}</div>
         </div>
         <div class="character-btns">
             <div style="text-align:center;padding-top: 5%;display:flex;justify-content: space-around;">
@@ -35,7 +35,7 @@
             <h3>Nourrir</h3>
         </div>
         <div class="food-stats">
-            <div>Faim {{ tamagos[0].hunger }}/100</div>
+            <div>Faim {{ tamago.hunger }}/100</div>
         </div>
         <div class="nourrir-ligne" ng-repeat="item in items" ng-if="item.type === 'food'">
             <div style="display:block;width:20%;">
