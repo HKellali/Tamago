@@ -17,24 +17,39 @@ function HomeController($scope, items, tamagos) {
     $scope.updateState = updateState;
     $scope.feed = feed;
 
+    $scope.food = {
+        activities: [],
+        name: 'tofu',
+        type: 'food',
+        hunger: -10,
+        health: 10,
+        energy: "1",
+        mood: -2
+    };
+
+    // items.save($scope.food);
+
     function changePanel(panel) {
         $scope.panel = panel;
     }
 
-    function updateState(){
-        $scope.state = $scope.tamago.hunger >= 50?'Happy' : 'Normal';
+    function updateState() {
+        $scope.state = $scope.tamago.hunger >= 50 ? 'Happy' : ($scope.tamago.hunger > 0 ? 'Normal' : 'Angry');
     }
 
-    function feed(item){
-        $scope.tamago.hunger +=  item.hunger;
+    function feed(item) {
+        $scope.tamago.hunger += item.hunger;
         updateState();
-        if($scope.tamago.hunger >= 100){
+        if ($scope.tamago.hunger >= 100) {
             $scope.tamago.hunger = 100;
+        }
+        if ($scope.tamago.hunger <= 0) {
+            $scope.tamago.hunger = 0;
         }
         tamagos.update($scope.tamago);
     }
 
-    function getTamago () {
+    function getTamago() {
         $scope.loader = true;
         tamagos.get().then(function (response) {
             $scope.tamago = response.data;
@@ -48,6 +63,7 @@ function HomeController($scope, items, tamagos) {
         items.get().then(function (response) {
             $scope.items = response.data;
             $scope.loader = false;
+            console.log($scope.items);
         });
     }
 
@@ -56,5 +72,6 @@ function HomeController($scope, items, tamagos) {
         items.save($scope.item);
         $scope.getItems();
     }
+
     $scope.getTamago();
 }

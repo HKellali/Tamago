@@ -43,7 +43,7 @@
                 <!--<span class="nourrir-ligne-nom">{{ item.name }}</span>-->
                 <!--<span class="nourrir-ligne-item">7</span>-->
                 <!--<div class="nourrir-ligne-img" style="background-image:url(../img/cerise.png)"></div>-->
-                <span class="nourrir-ligne-attr">+{{ item.hunger }}</span>
+                <span class="nourrir-ligne-attr"><span ng-show="item.hunger > 0">+</span>{{ item.hunger }}</span>
             </div>
         </div>
     </section>

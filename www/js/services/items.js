@@ -11,23 +11,16 @@ app.factory('items', ['$http', function ($http) {
             }
             return promise;
         },
-        use: function (data) {
-            $http.post(url, {
-                    id: data.id,
-                }
-            ).then(function (response) {
-                console.log(response);
-                return response;
-            });
-        },
         save: function (data) {
+            console.log(data);
             $http.post(url, {
+                    activities: data.activities,
                     name: data.name,
                     type: data.type,
                     hunger: data.hunger,
                     health: data.health,
-                    energy: data.energy,
-                    mood: data.mood
+                    mood: data.mood,
+                    energy: data.energy
                 }
             ).then(function (response) {
                 console.log(response);
