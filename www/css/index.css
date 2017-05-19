@@ -11,16 +11,11 @@ body {
   -webkit-user-select: none;
   /* prevent copy paste, to allow, change 'none' to 'text' */
   background-color: #E4E4E4;
-  background-image: linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-  background-image: -webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-  background-image: -ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7A7A7), color-stop(0.51, #E4E4E4));
-  background-attachment: fixed;
   font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
   width: 100%;
 }
@@ -119,51 +114,45 @@ h1 {
 }
 
 #main button {
-    left:25%;
-    width:150px;
-    height:50px;
-    margin-top: 5%;
-    display: inline-block;
-    position: relative;
-    padding: 0 20px;
-    text-align: center;
-    text-decoration: none;
-    font: bold 12px/25px helveticaNeue-light;
-    
-    background: rgba(204,0,51,0.2);
-    background: -moz-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff4d4d), color-stop(100%,#ff0000));
-    background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
-    background: -o-linear-gradient(top,#ff4d4d 0%,#ff0000 100%);
-    background: -ms-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
-    background: linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
-    color:#fff;
+  left: 25%;
+  width: 150px;
+  height: 50px;
+  margin-top: 5%;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px/25px helveticaNeue-light;
+  background: rgba(204, 0, 51, 0.2);
+  background: -moz-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff4d4d), color-stop(100%, #ff0000));
+  background: -webkit-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  background: -o-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  background: -ms-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  background: linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  color: #800000;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.22);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+}
 
-    text-shadow: 1px 1px 1px rgba(255,255,255, 0.22);
-
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);
-    box-shadow:  1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);  outline:none;}
-
-.connection-btn button, .compte-btn button, .character-btns button{
-    width: 150px;
-    height: 30px;
-    background: -webkit-linear-gradient(top, #ff4d4d 0%,#ff0000 100%);
-    color: #fff;
-    font: bold 12px/25px helveticaNeue-light;
-
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);
-    box-shadow:  1px 1px 1px rgba(0,0,0, 0.29), inset 1px 1px 1px rgba(255,255,255, 0.44);
-outline:none;
+.connection-btn button, .compte-btn button {
+  width: 150px;
+  height: 30px;
+  background: -webkit-linear-gradient(top, #ff4d4d 0%, #ff0000 100%);
+  color: #800000;
+  font: bold 12px/25px helveticaNeue-light;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
 }
 
 .connection-nom input, .connection-pass input {
