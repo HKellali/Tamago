@@ -121,6 +121,7 @@ h1 {
   right: 0;
   bottom: 60px;
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
@@ -151,6 +152,20 @@ h1 {
   -ms-transform: translate3D(100%, 0, 0);
   -webkit-transform: translate3D(100%, 0, 0);
   transform: translate3D(100%, 0, 0);
+}
+
+.top {
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.bottom {
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .connection-title {
@@ -333,4 +348,40 @@ h1 {
   height: 20px;
   text-align: center;
   display: block;
+}
+
+.classement-titre {
+  text-align: center;
+  height: 15%;
+}
+
+.classement-table-titre {
+  height: 5%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.classement-table-titre div {
+  width: 33%;
+  text-align: center;
+}
+
+.classement-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 60%;
+}
+.classement-table table {
+  width: 100%;
+  display: block;
+  float: none;
+  text-align: center;
+  border: 1px solid red;
+  height: 200px;
+  overflow-y: scroll;
+}
+.classement-table th {
+  width: 100em;
 }

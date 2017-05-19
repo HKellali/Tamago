@@ -2,14 +2,15 @@
  * Created by hamid on 16/05/17.
  */
 
-app.controller('MainController', ['$scope', 'tamagos', MainController]);
+app.controller('MainController', ['$scope', 'tamagos', 'rankings', MainController]);
 
 
-function MainController($scope, tamagos) {
+function MainController($scope, tamagos, rankings) {
     $scope.panel = 0;
     $scope.connected = 1;
     $scope.name = '';
     $scope.tamago = {};
+    $scope.ranking = {};
 
     function getTamagos () {
         tamagos.get().then(function (response) {
@@ -22,6 +23,14 @@ function MainController($scope, tamagos) {
         tamagos.save($scope.tamago);
         $scope.getTamagos();
     }
+
+    function getRankings() {
+        rankings.get().then(function (response) {
+            $scope.rankings = response.data;
+        });
+    }
+
+    $scope.getRankings = getRankings;
 
     $scope.createTamago = createTamago;
     $scope.getTamagos = getTamagos;
@@ -39,4 +48,5 @@ function MainController($scope, tamagos) {
     };
 
     $scope.getTamagos();
+    $scope.getRankings();
 }

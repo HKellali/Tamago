@@ -29,7 +29,7 @@
             </div>
             <div class="compte-btn">
                 <button>Tamago</button>
-                <button>Ranking</button>
+                <button ng-click="changePanel(2);">Ranking</button>
             </div>
 
             <div class="create-tamago" ng-show="tamagos.length == 0">
@@ -78,6 +78,33 @@
             </div>
             <div class="connection-btn">
                 <button ng-click="changePanel(0); connect()">Sign in</button>
+            </div>
+        </section>
+    </section>
+    <section class="panel" ng-class="{center :panel === 2, top : panel < 2,bottom : panel > 2}">
+        <section class="panel">
+            <div class="classement-titre">
+                <h3>Classement</h3>
+            </div>
+            <div class="classement-table-titre">
+                <div>
+                    N&deg;
+                </div>
+                <div>
+                    Nom
+                </div>
+                <div>
+                    TP
+                </div>
+            </div>
+            <div class="classement-table">
+                <table>
+                    <tr ng-repeat="ranking in rankings" ng-init='start=0'>
+                        <th ng-init="start=start+1">{{start}}</th>
+                        <th>{{ranking.name}}</th>
+                        <th>40</th>
+                    </tr>
+                </table>
             </div>
         </section>
     </section>
