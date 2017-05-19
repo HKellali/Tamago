@@ -57,7 +57,8 @@ function MainController($scope, tamagos, rankings) {
     $scope.createTamago = createTamago;
     $scope.getTamagos = getTamagos;
 
-    $scope.changePanel = function (panel) {
+    $scope.changePanel = changePanel;
+
     function changePanel(panel) {
         $scope.panel = panel;
     }
@@ -68,9 +69,8 @@ function MainController($scope, tamagos, rankings) {
 
     function disconnect() {
         $scope.connected = 0;
-    };
+    }
 
     $scope.getTamagos();
     $scope.getRankings();
-    }
 }
