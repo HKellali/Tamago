@@ -5,11 +5,6 @@
 app.controller('MainController', ['$scope', 'tamagos', 'rankings', MainController]);
 
 function MainController($scope, tamagos, rankings) {
-    $scope.panel = 0;
-    $scope.connected = 1;
-    $scope.name = '';
-    $scope.tamago = {};
-    $scope.ranking = {};
 
     //functions
     $scope.createTamago = createTamago;
@@ -18,6 +13,7 @@ function MainController($scope, tamagos, rankings) {
     $scope.connect = connect;
     $scope.disconnect = disconnect;
     $scope.init = init;
+    $scope.getRankings = getRankings;
 
     //init
     $scope.init();
@@ -30,6 +26,7 @@ function MainController($scope, tamagos, rankings) {
 
         //functions
         $scope.getTamagos();
+        $scope.getRankings();
     }
 
     function getTamagos() {
@@ -52,12 +49,6 @@ function MainController($scope, tamagos, rankings) {
         });
     }
 
-    $scope.getRankings = getRankings;
-
-    $scope.createTamago = createTamago;
-    $scope.getTamagos = getTamagos;
-
-    $scope.changePanel = function (panel) {
     function changePanel(panel) {
         $scope.panel = panel;
     }
@@ -68,9 +59,5 @@ function MainController($scope, tamagos, rankings) {
 
     function disconnect() {
         $scope.connected = 0;
-    };
-
-    $scope.getTamagos();
-    $scope.getRankings();
     }
 }
