@@ -17,6 +17,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
+<<<<<<< Updated upstream
         <allow-intent href="market:*" />
         <splash density="land-hdpi" src="www/img/logo.png" />
         <splash density="land-ldpi" src="www/img/logo.png" />
@@ -26,6 +27,18 @@
         <splash density="port-ldpi" src="www/img/logo.png" />
         <splash density="port-mdpi" src="www/img/logo.png" />
         <splash density="port-xhdpi" src="www/img/logo.png" />
+=======
+        <allow-intent href="market:*"/>
+        <splash src="www/img/oeuf.jpg" density="land-hdpi"/>
+        <splash src="www/img/oeuf.jpg" density="land-ldpi"/>
+        <splash src="www/img/oeuf.jpg" density="land-mdpi"/>
+        <splash src="www/img/oeuf.jpg" density="land-xhdpi"/>
+
+        <splash src="www/img/oeuf.jpg" density="port-hdpi"/>
+        <splash src="www/img/oeuf.jpg" density="port-ldpi"/>
+        <splash src="www/img/oeuf.jpg" density="port-mdpi"/>
+        <splash src="www/img/oeuf.jpg" density="port-xhdpi"/>
+>>>>>>> Stashed changes
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
