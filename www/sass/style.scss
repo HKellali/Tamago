@@ -294,6 +294,11 @@ h1 {
   }
 }
 
+.button-back {
+  z-index: 100;
+  position: relative;
+}
+
 .compte-btn {
   text-align: center;
   height: 20%;
@@ -344,38 +349,38 @@ h1 {
   }
 }
 
-.classement-titre{
-  text-align:center;
-  height:15%;
+.classement-titre {
+  text-align: center;
+  height: 15%;
 }
 
-.classement-table-titre{
-  height:5%;
-  display:flex;
+.classement-table-titre {
+  height: 5%;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  width:90%;
-  div{
-    width:33%;
-    text-align:center;
+  width: 90%;
+  div {
+    width: 33%;
+    text-align: center;
   }
 }
 
-.classement-table{
+.classement-table {
   margin-left: auto;
   margin-right: auto;
-  width:90%;
-  height:60%;
-  table{
-    width:100%;
-    display:block;
-    float:none;
-    text-align:center;
+  width: 90%;
+  height: 60%;
+  table {
+    width: 100%;
+    display: block;
+    float: none;
+    text-align: center;
     border: 1px solid red;
-    height:200px;
-    overflow-y:scroll;
+    height: 200px;
+    overflow-y: scroll;
   }
   th {
-    width:100em;
+    width: 100em;
   }
 }

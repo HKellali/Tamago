@@ -9,7 +9,8 @@ function MainController($scope, tamagos, rankings) {
     //functions
     $scope.createTamago = createTamago;
     $scope.getTamagos = getTamagos;
-    $scope.changePanel = changePanel;
+    $scope.changePanelX = changePanelX;
+    $scope.changePanelY = changePanelY;
     $scope.connect = connect;
     $scope.disconnect = disconnect;
     $scope.init = init;
@@ -20,7 +21,8 @@ function MainController($scope, tamagos, rankings) {
 
     function init() {
         //variables
-        $scope.panel = 0;
+        $scope.panelX = 0;
+        $scope.panelY = 0;
         $scope.connected = 1;
         $scope.name = '';
 
@@ -49,8 +51,12 @@ function MainController($scope, tamagos, rankings) {
         });
     }
 
-    function changePanel(panel) {
-        $scope.panel = panel;
+    function changePanelX(panelX) {
+        $scope.panelX = panelX;
+    }
+
+    function changePanelY(panelY) {
+        $scope.panelY = panelY;
     }
 
     function connect() {

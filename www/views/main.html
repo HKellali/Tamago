@@ -1,11 +1,11 @@
 <section class="panel pannel-padding" ng-controller="MainController">
-    <button ng-hide="panel === 0" ng-click="changePanel(0)">Back</button>
-    <section class="panel" ng-class="{center :panel === 0, right : panel < 0, left : panel > 0}">
+    <button class="button-back" ng-hide="panelX === 0 && panelY === 0" ng-click="changePanelX(0); changePanelY(0)">Back</button>
+    <section class="panel"
+             ng-class="{center :panelX === 0 && panelY === 0, right : panelX < 0, left : panelX > 0, top : panelY < 0, bottom : panelY > 0}">
         <div ng-show="connected === 0" id="main">
-            <img id="logo" src="img/tamago.png" alt="logo"/>
-            <button ng-click="changePanel(1)">Sign in</button>
+            <button ng-click="changePanelX(1)">Sign in</button>
             <br/>
-            <button ng-click="changePanel(-1)">Sign up</button>
+            <button ng-click="changePanelX(-1)">Sign up</button>
         </div>
         <div ng-show="connected === 1" id="account">
             <div class="compte-titre">
@@ -29,7 +29,7 @@
             </div>
             <div class="compte-btn">
                 <button>Tamago</button>
-                <button ng-click="changePanel(2);">Ranking</button>
+                <button ng-click="changePanelY(1);">Ranking</button>
             </div>
 
             <div class="create-tamago" ng-show="tamagos.length == 0">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-    <section class="panel" ng-class="{center :panel === -1, right : panel < -1, left : panel > -1}">
+    <section class="panel" ng-class="{center :panelX === -1, right : panelX < -1, left : panelX > -1}">
         <div class="connection-title">
             <h3>Sign up</h3>
         </div>
@@ -62,7 +62,7 @@
             <button type="button">Sign up</button>
         </div>
     </section>
-    <section class="panel" ng-class="{center :panel === 1, right : panel < 1, left : panel > 1}">
+    <section class="panel" ng-class="{center :panelX === 1, right : panelX < 1, left : panelX > 1}">
         <section class="panel">
             <div class="connection-title">
                 <h3>Sign in</h3>
@@ -77,11 +77,11 @@
                 <input type="text">
             </div>
             <div class="connection-btn">
-                <button ng-click="changePanel(0); connect()">Sign in</button>
+                <button ng-click="changePanelX(0); connect()">Sign in</button>
             </div>
         </section>
     </section>
-    <section class="panel" ng-class="{center :panel === 2, top : panel < 2,bottom : panel > 2}">
+    <section class="panel" ng-class="{center :panelY === 1, top : panelY < 1,bottom : panelY > 1}">
         <section class="panel">
             <div class="classement-titre">
                 <h3>Classement</h3>
