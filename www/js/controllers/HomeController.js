@@ -14,9 +14,18 @@ function HomeController($scope, items, tamagos) {
     $scope.getItems = getItems;
     $scope.changePanel = changePanel;
     $scope.getTamagos = getTamagos;
+    $scope.feed = feed;
 
     function changePanel(panel) {
         $scope.panel = panel;
+    }
+
+    function feed(item){
+        $scope.tamagos[0].hunger +=  item.hunger;
+        if($scope.tamagos[0].hunger >= 100){
+            $scope.tamagos[0].hunger = 100;
+        }
+
     }
 
     function getTamagos () {

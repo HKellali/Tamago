@@ -321,11 +321,20 @@ h1 {
   text-align: center;
 }
 
+.character-icon {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
 .nourrir-ligne {
   display: flex;
   justify-content: space-around;
-  height: 10%;
-  margin-bottom: 15%;
+}
+.nourrir-ligne .food-icon {
+  height: 50px;
+  width: 50px;
 }
 .nourrir-ligne .nourrir-ligne-img {
   width: 100%;

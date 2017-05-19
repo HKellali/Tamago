@@ -1,5 +1,5 @@
-app.factory('items', ['$http', function ($http) {
-    var url = 'https://tamago.niamor.com/api/item';
+app.factory('activities', ['$http', function ($http) {
+    var url = 'https://tamago.niamor.com/api/activities';
     return {
         get: function () {
             var promise;
@@ -11,23 +11,14 @@ app.factory('items', ['$http', function ($http) {
             }
             return promise;
         },
-        use: function (data) {
-            $http.post(url, {
-                    id: data.id,
-                }
-            ).then(function (response) {
-                console.log(response);
-                return response;
-            });
-        },
         save: function (data) {
-            $http.post(url, {
+            $http.post(url, {/*
                     name: data.name,
                     type: data.type,
                     hunger: data.hunger,
                     health: data.health,
                     energy: data.energy,
-                    mood: data.mood
+                    mood: data.mood*/
                 }
             ).then(function (response) {
                 console.log(response);

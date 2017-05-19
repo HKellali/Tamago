@@ -19,7 +19,7 @@ body {
   z-index: 2;
 }
 
-.loader-circle{
+.loader-circle {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -308,11 +308,20 @@ h1 {
   text-align: center;
 }
 
+.character-icon {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
 .nourrir-ligne {
   display: flex;
   justify-content: space-around;
-  height: 10%;
-  margin-bottom: 15%;
+  .food-icon {
+    height: 50px;
+    width: 50px;
+  }
   .nourrir-ligne-img {
     width: 100%; /*or 70%, or what you want*/
     height: 100%; /*or 70%, or what you want*/

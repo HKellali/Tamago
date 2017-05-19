@@ -5,3 +5,5 @@
 -corriger le probleme des icones qui ne s'affichent pas
 -corriger le probleme du compass
 -noter toutes les commandes à taper par les autres dev
+-ajout du meme loader sur toutes les pages
+-avoir des variables communes à toutes les vues
